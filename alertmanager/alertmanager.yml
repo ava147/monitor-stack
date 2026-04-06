@@ -1,9 +1,9 @@
 global:
   resolve_timeout: 5m
   smtp_smarthost: 'smtp.qq.com:465'
-  smtp_from: '1747103233@qq.com'       # 你的发送邮箱
-  smtp_auth_username: '1747103233@qq.com'
-  smtp_auth_password: 'psnchzaapuepeeaj'  # 注意：是授权码，不是QQ密码！
+  smtp_from: 'qq.com'       # 你的发送邮箱
+  smtp_auth_username: 'qq.com'  # 你的发送邮箱
+  smtp_auth_password: 'xxxxxx'  # 注意：是授权码，不是QQ密码！
   smtp_require_tls: false
 
 route:
@@ -16,5 +16,5 @@ route:
 receivers:
 - name: 'email-alert'
   email_configs:
-  - to: '1747103233@qq.com'            # 接收告警的邮箱（自己发给自己）
+  - to: 'qq.com'            # 接收告警的邮箱（自己发给自己）
     send_resolved: true                # 故障恢复时也发邮件
