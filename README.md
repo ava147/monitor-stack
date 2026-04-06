@@ -42,6 +42,12 @@ docker-compose up -d
     - 默认密码: admin (首次登录需修改)
 - Prometheus: http://localhost:9090
 - Alertmanager: http://localhost:9093
+示例展示：
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+引起CPU使用率过高报警后收到告警邮件:
+![alt text](Screenshot_2026-04-06-13-13-08-271_com.tencent.mobileqq-edit.jpg)
 ## 🧩 预装 Grafana 插件说明
 本项目在 grafana-data/plugins 目录下预装了以下官方应用插件，无需手动安装即可在 Grafana 中使用：
 
