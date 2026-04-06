@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 15s # 每 15 秒抓取一次数据
+  evaluation_interval: 15s # 每 15 秒评估一次告警规则
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - 'alertmanager:9093' # 对接 Alertmanager
+
+rule_files:
+  - "alert.rules" # 加载告警规则文件
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100'] # 抓取本机的 Node Exporter 指标
